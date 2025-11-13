@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <!-- Define o tipo de documento como HTML5 -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a página para dispositivos móveis -->
+    <title>Login</title> <!-- Título da aba do navegador -->
+
+    <!-- Importa a fonte Montserrat do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Vídeo de fundo que será exibido em loop, sem som -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="img/fundo.mp4" type="video/mp4">
+    </video>
+
+    <!-- Container principal que envolve os formulários -->
+    <div class="container" id="authBox">
+        <div class="cartao">
+            <!-- Formulário de login -->
+            <div class="form login">
+                <h2>Iniciar Sessão</h2>
+                <!-- Campo para email -->
+                <input type="email" placeholder="Email" required>
+                <!-- Campo para senha -->
+                <input type="password" placeholder="Senha" required>
+
+                <!-- Opções extras: lembrar senha e link para recuperação -->
+                <div class="opcao">
+                    <label><input type="checkbox">Lembrar de mim</label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+
+                <!-- Botão para enviar login -->
+                <button type="submit">Entrar</button>
+
+                <!-- Link para alternar para o formulário de registro -->
+                <div class="Registrar">Criar uma conta?<span onclick="toggleForm()"> Registre-se</span></div>
+            </div>
+
+            <!-- Formulário de registro -->
+            <div class="form entrar">
+                <h2>Criar Conta</h2>
+                <!-- Campos para cadastro -->
+                <input type="text" placeholder="Usuario" required>
+                <input type="email" placeholder="Email" required>
+                <input type="number" placeholder="Telefone" required>
+                <input type="password" placeholder="Senha" required>
+
+                <!-- Botão para enviar cadastro -->
+                <button type="submit">Cadastrar</button>
+
+                <!-- Link para alternar para o login -->
+                <div class="toggle">Já tem uma conta?<span onclick="toggleForm()"> Entrar</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importa o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
